@@ -7,3 +7,21 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+uuid = { version = "0.8.1", features = ["v4"] }
+
+anyhow = "1.0.32"
+actix-rt = "1.1.1"
+actix-web = "3.0.2"
+
+async-graphql = "=2.0.0-alpha.15"
+async-graphql-actix-web = "=2.0.0-alpha.15"
+
+tracing-log = "0.1.1"
+opentelemetry = "0.8.0"
+tracing-futures = "0.2.4"
+tracing-subscriber = "0.2.12"
+opentelemetry-jaeger = "0.7.0"
+tracing-opentelemetry = "0.7.0"
+log = { version = "*", features = ["max_level_trace", "release_max_level_debug"] }
+tracing = { version = "0.1.19", features = ["max_level_trace", "release_max_level_debug"] }
