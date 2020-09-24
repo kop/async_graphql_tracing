@@ -23,8 +23,14 @@ This is an example project for [async-graphql/async-graphql/issues/278](https://
 
 In Jaeger we can see that span that is declared on HTTP handler layer is reported
 
-![Image](https://d960fn7fik8w3.cloudfront.net/ms_162475/QlU9vzUM65JbfTepsyWgxgWz83Gw57/Jaeger%2BUI%2B2020-09-24%2B16-35-32.png?Expires=1600956000&Signature=Ezp-jIQQMoDQSsWKfzG~cXitUYi6prAsveeXbgRKEycZBSUVgd76Be0tfmCOvRz299xClMJB0VY-I5uizE83cZNX7mAxSYIiu4ItBbhwjW-wdqzAjtxYBRcIahF8vRDa85hmI1ueEc9dvPUtSCmLLVaJqYJUqjg~D~6eHQyjo5BllfVTMq96d2js1-W0-~-an3PgyHSKpmOcmeMv14Ry-cCQqZ59vrws21vxzlez4SFGhyPMkZsun~2c3g0cbGycRg8uDIJ8wpgsRvcT20Fi2EvoAbqNTi7PEptiKWSU6QE3tUm1kx6j23zcrDC1vEUJq0nwl2WTlIYHSJ8NPT7x4w__&Key-Pair-Id=APKAJBCGYQYURKHBGCOA)
+![Image](./images/1.png)
 
-But no spans reported from `Tracing` extension.
+But no spans reported from Tracing extension.
 
-Interesting observation. In this project I was able to see `async_graphql::query` events from extension in logs, but in my real project, they don't appear for some reason. 
+In logs we can see events from both HTTP handler and Tracing extension:
+
+![Image](./images/2.png)
+
+Interesting observation.
+In this project I was able to see `async_graphql::query` events from extension in logs,
+but in my real project, they don't appear for some reason. 
